@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Bangers", serif;
+    font-weight: 800;
+    font-size: 25px;
+    transition: background-color 0.5s ease;
+}
+
+.navi ul li {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    justify-content: center;
+}
+
+.navi ul li a {
+    text-decoration: none;
+}
+
+.navi ul li a:hover {
+    text-decoration: underline;
+}
+
+.box {
+    border-bottom: #7e5daa 2px solid;
+    background-color: red;
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    position: relative;
+    top: 500px;
+    left: 350px;
+    border-radius: 50px;
+    width: 800px;
+}
+
+ul li a {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    left: 40px;
+}
+
+.orange a {
+    color: black;
+    background-color: orange;
+    animation: animate 3s linear infinite;
+    cursor: pointer;
+    transition: all 1s ease-out .2s;
+}
+
+@keyframes animate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.orange a:hover {
+    background-color: rgb(255, 230, 0);
+    transform: scale(2);
+}
+
+.white a {
+    color: black;
+    background-color: white;
+}
+
+.green a {
+    color: black;
+    background-color: green;
+}
+
+.red a {
+    color: black;
+    background-color: red;
+}
+
+.blue a {
+    color: black;
+    background-color: blue;
+}
+
+.yellow a {
+    color: black;
+    background-color: yellow;
+}
+
+.pink a {
+    color: black;
+    background-color: pink;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 20px;
+        /* Adjust font size for smaller screens */
+    }
+    .navi ul {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center items */
+    }
+    .navi ul li {
+        width: 100%;
+        /* Make list items full width */
+        margin: 5px 0;
+        /* Adjust margin for vertical spacing */
+    }
+    .box {
+        width: 90%;
+        /* Make the box width responsive */
+        left: 5%;
+        /* Center the box */
+        transform: none;
+        /* Remove transform for centering */
+    }
+}
