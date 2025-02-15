@@ -10,115 +10,180 @@ body {
     transition: background-color 0.5s ease;
 }
 
-.navi ul li {
-    display: inline-block;
-    margin: 10px;
-    padding: 15px;
-    text-align: center;
-    justify-content: center;
-}
-
-.navi ul li a {
-    text-decoration: none;
-}
-
-.navi ul li a:hover {
-    text-decoration: underline;
+p {
+    font-size: 35px;
+    position: absolute;
+    top: 300px;
+    left: 20%;
+    color: black;
+    font-family: "Playwrite NO Guides", serif;
+    font-weight: 400;
+    text-shadow: 1px 2.5px 1px red;
 }
 
 .box {
     border-bottom: #7e5daa 2px solid;
-    background-color: red;
-    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    background-color: aqua;
+    background-image: linear-gradient(to right, aqua, red, rgb(230, 230, 91));
     position: relative;
-    top: 500px;
+    top: 630px;
     left: 350px;
     border-radius: 50px;
     width: 800px;
-}
-
-ul li a {
-    position: relative;
-    text-align: center;
-    justify-content: center;
-    left: 40px;
+    height: 65px;
 }
 
 .orange a {
+    box-shadow: 2px 2px 5px 2px #fffafa;
+    border: 2px solid orange;
+    border-radius: 50px;
     color: black;
     background-color: orange;
-    animation: animate 3s linear infinite;
-    cursor: pointer;
-    transition: all 1s ease-out .2s;
-}
-
-@keyframes animate {
-    from {
-        filter: hue-rotate(0deg);
-    }
-    to {
-        filter: hue-rotate(360deg);
-    }
-}
-
-.orange a:hover {
-    background-color: rgb(255, 230, 0);
-    transform: scale(2);
+    margin: 10px;
+    padding: 8px;
+    text-decoration: none;
+    position: relative;
+    top: 20px;
+    left: 50px;
 }
 
 .white a {
+    box-shadow: 2px 2px 5px 2px #fffafa;
     color: black;
     background-color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    margin: 10px;
+    padding: 8px;
+    text-decoration: none;
+    position: relative;
+    top: 585px;
+    left: 505px;
 }
 
 .green a {
+    box-shadow: 2px 2px 5px 2px #fffafa;
     color: black;
     background-color: green;
+    border: 2px solid green;
+    border-radius: 50px;
+    margin: 10px;
+    padding: 8px;
+    text-decoration: none;
+    position: relative;
+    top: 557px;
+    left: 600px;
 }
 
 .red a {
+    box-shadow: 2px 2px 5px 2px #fffafa;
     color: black;
     background-color: red;
+    border: 2px solid red;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 8px;
+    text-decoration: none;
+    position: relative;
+    top: 531px;
+    left: 708.5px;
 }
 
 .blue a {
+    box-shadow: 2px 2px 5px 2px #fffafa;
+    border: 2px solid blue;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 8px;
+    text-decoration: none;
+    position: relative;
+    top: 504px;
+    left: 798px;
     color: black;
     background-color: blue;
 }
 
 .yellow a {
+    box-shadow: 2px 2px 5px 2px #fffafa;
+    border: 2px solid yellow;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 8px;
+    text-decoration: none;
+    position: relative;
+    top: 475px;
+    left: 898px;
     color: black;
     background-color: yellow;
 }
 
 .pink a {
+    box-shadow: 2px 2px 5px 2px #fffafa;
+    border: 2px solid pink;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 8px;
+    text-decoration: none;
+    position: relative;
+    top: 448px;
+    left: 1020px;
     color: black;
     background-color: pink;
 }
 
-@media (max-width: 600px) {
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
     body {
         font-size: 20px;
         /* Adjust font size for smaller screens */
     }
-    .navi ul {
-        flex-direction: column;
-        /* Stack items vertically */
-        align-items: center;
-        /* Center items */
-    }
-    .navi ul li {
-        width: 100%;
-        /* Make list items full width */
-        margin: 5px 0;
-        /* Adjust margin for vertical spacing */
+    p {
+        font-size: 25px;
+        /* Adjust paragraph font size */
+        top: 200px;
+        /* Adjust position */
+        left: 10%;
+        /* Adjust position */
     }
     .box {
+        top: 500px;
+        /* Adjust position */
         width: 90%;
-        /* Make the box width responsive */
+        /* Make the box wider on smaller screens */
+    }
+    .orange a,
+    .white a,
+    .green a,
+    .red a,
+    .blue a,
+    .yellow a,
+    .pink a {
+        width: 100%;
+        /* Make buttons full width */
+        text-align: center;
+        /* Center text */
+        margin: 5px 0;
+        /* Adjust margin */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 18px;
+        /* Further adjust font size for very small screens */
+    }
+    p {
+        font-size: 20px;
+        /* Further adjust paragraph font size */
+        top: 150px;
+        /* Further adjust position */
         left: 5%;
-        /* Center the box */
-        transform: none;
-        /* Remove transform for centering */
+        /* Further adjust position */
+    }
+    .box {
+        top: 400px;
+        /* Further adjust position */
     }
 }
